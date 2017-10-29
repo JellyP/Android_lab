@@ -246,6 +246,7 @@ public class MainActivity extends AppCompatActivity {
                     {
                         commonAdapter.removeItem(goods.getIndex());
                     }
+                    //goodsDetail.get(goods.getIndex()).markStar=goods.getMarkStar();
                 }
             }
         }

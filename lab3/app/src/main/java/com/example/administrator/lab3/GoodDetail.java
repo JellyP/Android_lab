@@ -61,8 +61,8 @@ public class GoodDetail extends AppCompatActivity {
         Bundle tmp = getIntent().getExtras();
         //获取从商品列表中发送的数据
         if(tmp != null) goods = (Goods) tmp.get("goods");
-        goods.resetMarkShopcar();//初始化为未加入购物车
-        goods.resetMarkStar();//初始化为未加入收藏
+//        goods.resetMarkShopcar();//初始化为未加入购物车
+//        goods.resetMarkStar();//初始化为未加入收藏
 
         if(goods!=null)
         {
