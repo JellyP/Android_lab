@@ -127,9 +127,9 @@ public class MainActivity extends AppCompatActivity {
 
         //动态广播：
         EventBus.getDefault().register(this);//注册
-        Receiver receiver=new Receiver();//
+        DynamicReceiver receiver=new DynamicReceiver();//
         IntentFilter intentFilter=new IntentFilter();//过滤器
-        intentFilter.addAction(Receiver.DYNAMICACTION);//设置行为为动态的
+        intentFilter.addAction(DynamicReceiver.DYNAMICACTION);//设置过滤条件
         registerReceiver(receiver,intentFilter);//注册接收器
         //跳转购物车
 //        Bundle bundletemp=getIntent().getExtras();
@@ -295,8 +295,7 @@ public class MainActivity extends AppCompatActivity {
     @Subscribe(threadMode = ThreadMode.MAIN)
     public void onEventMainThread(Goods event)
     {
-        Log.d("购物车",event.getName());
-
+        /*添加该物品到购物车*/
         Map<String,Object> temp=new HashMap<String,Object>();
         temp.put("goods_Firstletter",event.getGoods_firstletter());
         temp.put("goodsname",event.getName());
@@ -304,10 +303,10 @@ public class MainActivity extends AppCompatActivity {
         temp.put("index",event.getIndex());
         shoppingcarList.add(temp);
         simpleAdapter.notifyDataSetChanged();
-
+        /*发送广播，设置跳转*/
         Bundle sendBundleShoppingcar=new Bundle();
         sendBundleShoppingcar.putSerializable("dynamic",event);
-        Intent dynamicBroadcast=new Intent(Receiver.DYNAMICACTION);
+        Intent dynamicBroadcast=new Intent(DynamicReceiver.DYNAMICACTION);
         dynamicBroadcast.putExtras(sendBundleShoppingcar);
         sendBroadcast(dynamicBroadcast);
     }
@@ -315,7 +314,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onDestroy()
     {
         super.onDestroy();
-        EventBus.getDefault().unregister(this);
+        EventBus.getDefault().unregister(this);//注销订阅者
     }
 
     @Override

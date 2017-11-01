@@ -103,7 +103,7 @@ public class GoodDetail extends AppCompatActivity {
                 data_back.putSerializable("shoppingcar",goods);
                 goods.setMarkShopcar();
                 Toast.makeText(getApplicationContext(),"商品已添加到购物车",Toast.LENGTH_SHORT).show();
-                EventBus.getDefault().post(goods);
+                EventBus.getDefault().post(goods);//发送该商品
             }
         });
 
