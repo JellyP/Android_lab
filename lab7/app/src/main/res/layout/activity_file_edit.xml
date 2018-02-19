@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.lab7.FileEdit">
+<TextView
+    android:id="@+id/title"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="File Editor"
+    android:textColor="@color/colorPrimaryDark"
+    android:textSize="40dp"
+    android:layout_centerHorizontal="true"
+    />
+    <LinearLayout
+        android:id="@+id/linear_layout"
+        android:layout_below="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10"
+
+        >
+
+        <EditText
+            android:id="@+id/file_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/file_content"
+            android:layout_width="match_parent"
+            android:gravity="left|top"
+            android:layout_height="wrap_content"
+            android:layout_weight="8"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            >
+            <Button
+                android:id="@+id/save_button"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="save"
+                android:layout_alignParentLeft="true"
+
+
+                />
+            <Button
+                android:id="@+id/load_button"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="load"
+
+
+                android:layout_centerHorizontal="true"
+
+                />
+            <Button
+                android:id="@+id/clear_button1"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:text="clear"
+
+                android:layout_alignParentRight="true"
+
+                />
+            <Button
+                android:id="@+id/delete_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@id/save_button"
+                android:layout_alignRight="@id/clear_button1"
+                android:layout_below="@id/load_button"
+                android:text="delete"
+                android:textColor="@color/colorAccent"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</RelativeLayout>

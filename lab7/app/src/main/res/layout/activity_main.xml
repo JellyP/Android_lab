@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.administrator.lab7.MainActivity">
+
+    <EditText
+        android:id="@+id/new_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="New Password"
+        android:inputType="textPassword"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="100dp"
+        />
+    <EditText
+        android:id="@+id/confirm_password"
+        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:hint="Confirm Password"
+        android:inputType="textPassword"
+
+        app:layout_constraintTop_toBottomOf="@+id/new_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+
+        />
+    <Button
+        android:id="@+id/ok_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="OK"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp" />
+    <Button
+        android:id="@+id/clear_button"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:text="CLEAR"
+        app:layout_constraintLeft_toRightOf="@+id/ok_button"
+        app:layout_constraintTop_toBottomOf="@+id/confirm_password"
+        />
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        android:visibility="invisible"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/ok_button"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+</android.support.constraint.ConstraintLayout>
