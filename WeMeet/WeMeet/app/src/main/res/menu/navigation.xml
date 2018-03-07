@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_haowu"
+        android:icon="@drawable/ic_haowu_24dp"
+        android:title="好物" />
+
+    <item
+        android:id="@+id/navigation_ketang"
+        android:icon="@drawable/ic_shiji_24dp"
+        android:title="课堂" />
+
+    <item
+        android:id="@+id/navigation_dianpu"
+        android:icon="@drawable/ic_fujin_24dp"
+        android:title="店铺" />
+    <item
+    android:id="@+id/navigation_gouwu"
+    android:icon="@drawable/ic_gouwu_24dp"
+    android:title="购物" />
+    <item
+        android:id="@+id/navigation_wode"
+        android:icon="@drawable/ic_wode_24dp"
+        android:title="我的" />
+</menu>

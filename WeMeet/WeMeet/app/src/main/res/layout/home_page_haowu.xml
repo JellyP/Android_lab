@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/best_thing"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/best_thing"
+        />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/haowu_swipe_refresh_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@id/best_thing"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/haowu_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="40dp"
+
+            />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

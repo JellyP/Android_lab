@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="165dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/haowu_item_shape"
+    android:layout_marginLeft="15dp"
+    android:layout_marginBottom="10dp"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/haowu_item_image"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/loading"
+        android:layout_marginTop="5dp"
+        app:civ_border_width="1dp"
+        />
+    <TextView
+        android:id="@+id/haowu_item_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/haowu_item_image"
+        android:layout_marginTop="10dp"
+        android:text="鱼香肉丝"
+        android:textColor="@color/colorBlack"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp"
+        />
+    <ImageView
+        android:id="@+id/haowu_item_dianzan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dianzan"
+        android:layout_below="@id/haowu_item_image"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="30dp"
+        />
+    <TextView
+        android:id="@+id/haowu_item_dianzan_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/haowu_item_image"
+        android:textSize="10dp"
+        android:text="100"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="12dp"
+        android:layout_alignParentRight="true"
+        />
+
+</RelativeLayout>

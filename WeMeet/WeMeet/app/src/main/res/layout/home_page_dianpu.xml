@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/choose_eatting_wrapper"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:weightSum="8"
+        >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5">
+            <Button
+                android:id="@+id/breakfast_btn"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/breakfast"
+                />
+            <TextView
+                android:id="@+id/breakfast_text"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="早餐"
+                android:layout_gravity="center_horizontal|bottom"
+                android:textColor="@color/colorBlack"
+                android:textSize="12dp"
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5">
+            <Button
+                android:id="@+id/lunch_btn"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:background="@drawable/lunch"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/lunch_text"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="午餐"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorBlack"
+                android:textSize="12dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5">
+            <Button
+                android:id="@+id/dinner_btn"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:background="@drawable/dinner"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/dinner_text"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="晚餐"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorBlack"
+                android:textSize="12dp"
+
+                />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1.5">
+            <Button
+                android:id="@+id/midnight_snack_btn"
+                android:layout_width="80dp"
+                android:layout_height="60dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/midnight_snack"
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:id="@+id/midnight_snack_text"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:text="宵夜"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/colorBlack"
+                android:textSize="12dp"
+
+                />
+        </LinearLayout>
+    </LinearLayout>
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/dianpu_swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/choose_eatting_wrapper"
+        android:layout_marginBottom="60dp"
+        android:layout_centerHorizontal="true"
+
+        >
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/dianpu_list_recyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+                                                          >
+
+        </android.support.v7.widget.RecyclerView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>
